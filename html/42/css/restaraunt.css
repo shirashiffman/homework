@@ -1,0 +1,22 @@
+img {
+    height: 150px;
+}
+
+h1 {
+  background-color: gray;
+
+}
+
+p {
+  color: darkslategray;
+}
+
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  color: orangered;
+  font-size: 2em;
+  text-align: center;
+  font-style: italic;
+
+}
