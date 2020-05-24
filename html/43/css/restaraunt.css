@@ -1,0 +1,83 @@
+
+body{
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}
+
+img {
+    height: 150px;
+}
+
+h1 {
+  background-color: white;
+  font-size: 1.25em;
+
+}
+
+h1 a{
+  padding-left: 2em;
+  text-decoration: none;
+}
+
+#menu{
+  text-align: center;
+  border-bottom: 5px red;
+  color: green;
+}
+
+#logo{
+  max-height: 50px;
+ /* float: left;
+ margin-left: 3em;*/
+
+}
+
+p {
+  color: darkslategray;
+}
+
+h2 {
+  margin-top: 2em;;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(18, 48, 131);
+  font-size: 2em;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 2px 4px lightblue;
+}
+
+
+
+a:link, a:visited{
+  color: black;
+}
+
+a:hover, a:focus, a:active{
+  opacity: .6;
+}
+
+#map{
+  float:right;
+  height:16em;
+}
+
+.menuItem{
+  font-size: 1.5em;
+  color: blue;
+  
+}
+
+.images{
+  text-align: center;
+}
+
+.contact{
+  text-transform: uppercase;
+}
+
+.largeText{
+  height: 300px;
+  overflow: auto;
+}
