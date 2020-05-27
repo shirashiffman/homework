@@ -1,0 +1,42 @@
+
+
+.menuItem img{
+    width: 175px;
+    height: 200px;
+    border: 5px solid  rgba(149, 222, 89);
+    border-radius: 25px;
+  
+    
+  }
+  
+  .menuItem li{
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  li{
+      list-style-type: none;
+  }
+
+  .menuItem p{
+      text-align: center;
+      color: white;
+      position: absolute;
+      bottom: -5px;
+      background-color: rgba(128, 128, 128, 0.795);
+      border-radius: 45px;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+   
+  }
+
+  .menuItem div{
+      position: relative;
+      text-align: center;   
+      margin: 1em 1em 1em 1em;
+    float:left;
+  }
+  ul{
+      margin-top: 50px;
+  }

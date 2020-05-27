@@ -1,8 +1,12 @@
 
+
 body{
-  width: 80%;
+  width: 1000px;
   margin: auto;
   background-color: white;
+  padding: 2em 2em 2em 2em;
+  max-height: 3000px;
+  
 }
 
 img {
@@ -20,16 +24,26 @@ h1 a{
   text-decoration: none;
 }
 
-#menu{
-  text-align: center;
-  border-bottom: 5px red;
-  color: green;
+nav{
+
+  text-align: left;
+  
+}
+
+nav li{
+  display: inline;
+  margin-left: 4em;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: .75em;
+  
 }
 
 #logo{
-  max-height: 50px;
- /* float: left;
- margin-left: 3em;*/
+  max-height: 100px;
+  float: left;
+ margin-left: 3em;
+ margin-top: -2em;
 
 }
 
@@ -41,11 +55,21 @@ h2 {
   margin-top: 2em;;
   font-weight: bold;
   font-style: italic;
-  color: rgb(18, 48, 131);
-  font-size: 2em;
+  color: rgb(66,160, 34);
+  font-size: 2.5em;
   text-align: center;
   font-style: italic;
-  text-shadow: 2px 4px lightblue;
+  text-shadow: 2px 4px rgba(149, 222, 89);
+  margin-bottom: -.5em;
+}
+
+h3 {
+
+  color: rgba(149, 222, 89);
+  font-size: 1.5em;
+  text-align: center;
+  font-style: italic;
+  
 }
 
 
@@ -60,24 +84,68 @@ a:hover, a:focus, a:active{
 
 #map{
   float:right;
-  height:16em;
+  width: 350px;
+  height: 300px;
+  border: 5px solid  rgba(149, 222, 89);
+  border-radius: 25px;
+  margin-right: .5em;
+  margin-left: .5em;
 }
 
-.menuItem{
-  font-size: 1.5em;
-  color: blue;
-  
-}
 
-.images{
+ 
+
+img{
   text-align: center;
 }
 
 .contact{
-  text-transform: uppercase;
+  text-align: justify;
+  margin-right: 400px;
+
 }
 
 .largeText{
   height: 300px;
-  overflow: auto;
+
+}
+
+a{
+  font-size: 1.5em;
+}
+
+
+.homePic{
+  width: 250px;
+  height: 200px;
+  border: 5px solid  rgba(149, 222, 89);
+  border-radius: 25px;
+  margin-right: .5em;
+  margin-left: .5em;
+}
+
+#pictureDiv{
+ padding-left: 85px;
+}
+
+#p1{
+  padding-right: 6em;
+  padding-left: 6em;
+  padding-top: 2em;
+  text-align: justify;
+}
+
+#storeHours{
+  float: left;
+  margin-right: 35px;
+ 
+}
+
+.images{
+  padding-left: 80px;
+}
+
+#aboutText{
+  padding: 2em 2em 2em 2em;
+  text-align: justify;
 }
