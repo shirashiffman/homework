@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Salad Bar</title>
+    <link href="css/restaraunt.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="css/order.css" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="/images/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      html {
+        background-image: url("images/background.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="menuTop">
+      <ul>
+        <img src="images/logo.jpg" id="logo" />
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <br /><br /><br />
+    <form method="POST">
+      <h2>Salad Bar On the Go!</h2>
+      <h3>Order Now!</h3>
+      <label for="firstName">First Name:</label>
+      <input id="firstName" name="firstName" />
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" name="lastName" />
+      <label for="address">Address:</label>
+      <input id="address" name="address" />
+      <label for="phone">Phone Number:</label>
+      <input id="phone" name="phone" type="tel" />
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" />
+      <label for="date">Date:</label>
+      <input id="date" name="date" type="date" />
+      <label for="comments">Special Instructions:</label><br />
+      <textarea id="comments" name="comments"></textarea><br />
+
+      <label for="fromMenu"><h3>Add to Order:</h3></label>
+      <div id="orderDiv">
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="greekSalad"
+          /><img src="images/greekSalad.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="caesarSalad"
+            checked
+          /><img src="images/caesar.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="summerSalad"
+          /><img src="images/summerSalad.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="salad1"
+          /><img src="images/salad1.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="salad2"
+          /><img src="images/salad2.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="raspberry"
+          /><img src="images/raspberrySmoothie.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="strawberry"
+          /><img src="images/strawberrySmoothie.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="avocado"
+          /><img src="images/avocadoSmoothie.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="pineapple"
+          /><img src="images/pineappleSmoothie.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="chocolatechip"
+          /><img src="images/chocolatechip.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="blueberry"
+          /><img src="images/blueberryMuffin.jpg" />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="fromMenu"
+            name="fromMenu"
+            value="coffeecrumb"
+          /><img src="images/coffeecrumb.jpg" />
+        </div>
+      </div>
+
+      <label for="rating"><h3>Rate Your Experience</h3</label>
+      <input type="range" id="rating" name="rating" min="1" max="5" />
+
+      <input type="submit" id="submit" value="Order Now" />
+    </form>
+  </body>
+</html>
