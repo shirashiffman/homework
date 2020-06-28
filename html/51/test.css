@@ -1,0 +1,226 @@
+body {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+* {
+  font-family: helvetica, arial, sans-serif;
+}
+nav {
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 0.75em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  width: 80%;
+  margin: auto;
+}
+
+ul:first-child {
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+ul:nth-child(1) {
+  padding-left: 0;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.jumboTron {
+  background-color: lightgray;
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+#signUp {
+  background-color: lightgray;
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  border-radius: 0.5em;
+}
+
+.jumboTron h1 {
+  text-transform: uppercase;
+}
+
+.jumboTron container {
+  font-style: italic;
+}
+
+.tiles {
+  display: flex;
+}
+.tiles div {
+  width: 33.3%;
+}
+
+.tiles div > * {
+  width: 100%;
+}
+
+img {
+  min-width: 100%;
+}
+
+.tiles p {
+  text-align: justify;
+  font-size: 12px;
+}
+
+#firstTile {
+  margin-right: 0.5em;
+  padding-right: 0.5em;
+  border-right: 1px solid black;
+}
+
+#thirdTile {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  border-left: 1px solid black;
+}
+
+.tiles h4 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 999px) {
+  .tiles {
+    flex-wrap: wrap;
+  }
+  .tiles div {
+    width: 100%;
+    border: 0;
+  }
+  #firstTile,
+  #thirdTile {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  label,
+  input[type="submit"] {
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  input[type="submit"] {
+    margin-top: 1em;
+  }
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+h4 {
+  text-align: center;
+}
+input {
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px black;
+}
+#submit:hover {
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px gray;
+}
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  table-layout: auto;
+
+  width: 90%;
+}
+
+#tableDiv {
+  overflow: auto;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgoldenrodyellow;
+}
+tr:hover {
+  background-color: lightblue !important;
+}
+
+thead {
+  text-align: center;
+}
+
+td,
+tr,
+th {
+  border: 2px solid black;
+  padding: 0.5em;
+}
+
+caption {
+  font-weight: bold;
+  padding: 1em;
+}
+
+td {
+  text-align: right;
+}
+
+td:nth-child(1) {
+  font-weight: bold;
+  text-align: center;
+}
+td:nth-child(6) {
+  color: red;
+}
+
+tfoot td:nth-child(1) {
+  text-align: right;
+}
+
+tfoot td:nth-child(2) {
+  color: red;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 1em;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0.75em;
+}
+footer div {
+  width: 80%;
+  margin: auto;
+}
