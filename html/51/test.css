@@ -29,8 +29,8 @@ ul {
   margin: auto;
 }
 
-ul:first-child {
-  padding-left: 0;
+#firstNav {
+  padding-left: 0px;
 }
 
 nav ul li {
