@@ -83,9 +83,13 @@ let array = [1, 2, 3, 4];
 function isEven(number) {
   return number % 2 === 0;
 }
+function isOdd(number) {
+  return number % 2 !== 0;
+}
+
 function multiply(number) {
   return number * number;
 }
 
 console.log(ourOnlyIf(array, isEven, multiply));
-console.log(onlyIf(array, isEven, multiply));
+onlyIf(array, isOdd, console.log);
