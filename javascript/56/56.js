@@ -48,7 +48,7 @@ const interestCalculator = (function () {
   }
 
   function calculateInterest(principle) {
-    return principle * (1 + rate * years);
+    return principle * (1 + rate * years) - principle;
   }
 
   return {
@@ -58,6 +58,6 @@ const interestCalculator = (function () {
   };
 })();
 
-interestCalculator.setRate(0.05);
-interestCalculator.setYears(10);
-console.log(interestCalculator.calculateInterest(500));
+interestCalculator.setRate(0.1);
+interestCalculator.setYears(2);
+console.log(interestCalculator.calculateInterest(100));
