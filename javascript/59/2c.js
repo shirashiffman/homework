@@ -1,3 +1,6 @@
+// SL - 100 - Excellent, really good work!
+// SL - nice - why not always use IIFE so no globals and 'use strict' in function warning goes away too?
+
 "use strict";
 
 const counterA = window.myCounter.theCounter;

@@ -1,3 +1,4 @@
+// very nice!
 window.myCounter = window.myCounter || {};
 
 window.myCounter.counterCreator = (function (counterCreator) {

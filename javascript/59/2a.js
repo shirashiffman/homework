@@ -1,3 +1,4 @@
+// SL - nice
 window.myCounter = window.myCounter || {};
 
 window.myCounter.theCounter = (function (theCounter) {

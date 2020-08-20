@@ -1,3 +1,4 @@
+// SL - nice - why not always use IIFE so no globals and 'use strict' in function warning goes away too?
 "use strict";
 
 function ourMap(array, callback) {
