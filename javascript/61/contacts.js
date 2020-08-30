@@ -55,13 +55,14 @@
     const emailCell = newRow.insertCell();
     const phoneCell = newRow.insertCell();
 
-    //const deleteCell = newRow.insertCell();
+    const deleteCell = newRow.insertCell();
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete Contact";
 
-    document.body.appendChild(deleteButton);
-    deleteButton.addEventListener("click", (e) => {
-      contactsTable.deleteRow(e.)
+    deleteCell.appendChild(deleteButton);
+    //const index = contacts.length;
+    deleteButton.addEventListener("click", () => {
+      contactsTable.deleteRow(newRow.index);
     });
 
     firstCell.innerHTML = newContact.first;

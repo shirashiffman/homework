@@ -69,6 +69,10 @@
     for (let i = 0; i < divs.length; i++) {
       setCss(elemDivs[i], "backgroundColor", "transparent");
     }
+    let table = getElemId("colorTable");
+    for (let p = table.rows.length - 1; p > 0; p--) {
+      table.deleteRow(p);
+    }
 
     clearInterval(intervalId);
     intervalId = null;
@@ -76,14 +80,26 @@
   });
   let counter = 0;
   function addLine() {
-    const index = counter++;
+    //const index = counter++;
     const newRow = getElemId("colorTable").insertRow();
 
     newRow.addEventListener("click", () => {
-      for (let i = 0; i < divs.length; i++) {
-        divColors[i] = getRandomColor();
-        setCss(elemDivs[i], "backgroundColor", colorsArray[index][i]);
-      }
+      // for (let i = 0; i < divs.length; i++) {
+      //   divColors[i] = getRandomColor();
+      //   setCss(elemDivs[i], "backgroundColor", colorsArray[index][i]);
+      // }
+      setCss(elemDivs[0], "backgroundColor", cell1.innerHTML);
+      setCss(elemDivs[1], "backgroundColor", cell2.innerHTML);
+      setCss(elemDivs[2], "backgroundColor", cell3.innerHTML);
+      setCss(elemDivs[3], "backgroundColor", cell4.innerHTML);
+      setCss(elemDivs[4], "backgroundColor", cell5.innerHTML);
+      setCss(elemDivs[5], "backgroundColor", cell6.innerHTML);
+      setCss(elemDivs[6], "backgroundColor", cell7.innerHTML);
+      setCss(elemDivs[7], "backgroundColor", cell8.innerHTML);
+
+      clearInterval(intervalId);
+      intervalId = null;
+      theButton.innerHTML = "Start";
     });
     const timeCell = newRow.insertCell();
     const cell1 = newRow.insertCell();
