@@ -78,7 +78,7 @@
     intervalId = null;
     theButton.innerHTML = "Start";
   });
-  let counter = 0;
+  //let counter = 0;
   function addLine() {
     //const index = counter++;
     const newRow = getElemId("colorTable").insertRow();

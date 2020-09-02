@@ -1,0 +1,9 @@
+div {
+  width: 100%;
+}
+span {
+  margin: auto;
+  text-align: center;
+  display: block;
+  font-size: 3em;
+}
