@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="form.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form>
+      <input type="checkbox" id="checkbox" />Check to Start
+      <br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="email">Email: </label
+      ><input type="email" id="email" name="email" />
+      <br />
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+
+    <h2 id="submission"></h2>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function () {
+        "use strict";
+
+        const modalOverlay = document.createElement("div");
+        //var modalOverlay = $("<div id='modalOverlay'></div>");
+        modalOverlay.style.position = "absolute";
+        modalOverlay.style.width = "100%";
+        modalOverlay.style.height = "125px";
+        modalOverlay.style.left = "0";
+        modalOverlay.style.top = "25px";
+        modalOverlay.style.backgroundColor = "lightgray";
+        modalOverlay.style.opacity = ".5";
+
+        //document.body.appendChild(modalOverlay);
+        $("body").append(modalOverlay);
+        function reset() {
+          $("#checkbox").prop("checked", false);
+          $("#name").val("");
+          $("#email").val("");
+          modalOverlay.style.display = "inline";
+        }
+
+        reset();
+
+        $("#checkbox").change(function () {
+          if ($("#checkbox").is(":checked")) {
+            modalOverlay.style.display = "none";
+          } else modalOverlay.style.display = "block";
+        });
+
+        const button = $("#submit");
+        button.click(function (e) {
+          e.preventDefault();
+          //console.log("clicked");
+          $("#submission").append(
+            "Thank you for your submission, ",
+            $("#name").val(),
+            "! ",
+            $("#email").val()
+          );
+          reset();
+        });
+      })();
+    </script>
+  </body>
+</html>

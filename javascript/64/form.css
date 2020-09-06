@@ -1,0 +1,10 @@
+body {
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+}
+input {
+  margin-top: 1em;
+}
