@@ -1,19 +1,26 @@
+/*global $, pcs*/
 (function () {
   "use strict";
 
-  let fileName = "";
   let p = $("#p");
-
+  const spinner = $("#spinner");
   const button = $("#submit");
-  button.click((fileName) => {
-    p.text("Loading...");
-    fileName = document.getElementById("file").value;
+  button.click(() => {
+    //p.text("Loading...");
+    let fileName = document.getElementById("file").value;
     fetch(fileName)
-      .then((response) => response.text())
+      .then((r) => {
+        spinner.show();
+        if (!r.ok) {
+          throw new Error("File Not Found");
+        }
+        return r.text();
+      })
       .then((result) => {
         p.text(result);
       })
-      .catch(() => p.text("Error- File could not be loaded")); //pcs.messageBox.show(error));
+      .catch((error) => pcs.messageBox.show(error))
+      .finally(() => spinner.hide());
 
     document.getElementById("file").value = "";
   });

@@ -1,0 +1,32 @@
+[
+  {
+    "recipeId": "0",
+    "recipeName": "Meatballs and Spaghetti",
+    "image": "meatballs.jpg",
+    "ingredients": ["Meatballs", "Tomato Sauce", "Spaghetti"]
+  },
+  {
+    "recipeId": "1",
+    "recipeName": "Shnitzel",
+    "image": "shnitzel.jpg",
+    "ingredients": ["Chicken Cutlets", "Mayo", "Cornflake Crumbs"]
+  },
+  {
+    "recipeId": "2",
+    "recipeName": "French Fries",
+    "image": "fries.jpg",
+    "ingredients": ["Potatoes", "Oil", "Salt"]
+  },
+  {
+    "recipeId": "3",
+    "recipeName": "Churros",
+    "image": "churros.jpg",
+    "ingredients": [
+      "Flour",
+      "Sugar",
+      "Eggs",
+      "Vanilla",
+      "Chocolate Sauce - Optional"
+    ]
+  }
+]
