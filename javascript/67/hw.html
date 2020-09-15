@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="hw.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <h1 class="navbar-brand">PCS Videos</h1>
+      <div>
+        <input id="searchBox" />
+        <button id="searchButton">
+          <img src="mag.png" height="15px" />
+        </button>
+      </div>
+    </nav>
+    <div id="playerArea">
+      <div id="videoPlayer"></div>
+      <div id="videoList">
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap" id="videoDiv"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="hw.js"></script>
+  </body>
+</html>

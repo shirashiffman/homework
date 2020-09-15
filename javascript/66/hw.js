@@ -27,5 +27,5 @@
     });
   }
 
-  // $('input[name=gender]:checked').val()
+  // $('input[name=recipe]:checked').val()
 })();
