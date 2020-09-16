@@ -12,25 +12,21 @@
     })
     .then((videos) => {
       displayVideos(videos);
-      videos.forEach((el) => {
-        $(`<li><img src="${el.image}"/>${el.song}</li>`)
-          .appendTo($("#list"))
-          .click(() => {
-            $("#videoPlayer").empty();
-            $("#videoPlayer").append(
-              $(`<video id="theVideo" src="${el.url}" controls></video>`)
-            );
-            $("#theVideo")[0].play();
-          });
-      });
+      displayList(videos);
 
       const searchButtonElem = $("#searchButton");
       searchButtonElem.click(() => {
-        displayVideos(search(videos, $("#searchBox").val()));
-        $("#searchBox").val("");
+        let key = $("#searchBox").val();
+        displayVideos(search(videos, key));
         if ($("#videoDiv").is(":empty")) {
           $("#videoDiv").text("No Videos Found");
         }
+
+        displayList(search(videos, key));
+        if ($("#list").is(":empty")) {
+          $("#list").text("No Videos Found");
+        }
+        $("#searchBox").val("");
         // console.log(search(videos, $("#searchBox").val()));
       });
     })
@@ -68,5 +64,19 @@
       }
     });
     return newArray;
+  }
+  function displayList(videos) {
+    $("#list").empty();
+    videos.forEach((el) => {
+      $(`<li><img src="${el.image}"/>${el.song}</li>`)
+        .appendTo($("#list"))
+        .click(() => {
+          $("#videoPlayer").empty();
+          $("#videoPlayer").append(
+            $(`<video id="theVideo" src="${el.url}" controls></video>`)
+          );
+          $("#theVideo")[0].play();
+        });
+    });
   }
 })();
