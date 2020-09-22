@@ -1,0 +1,45 @@
+#modal {
+  background-color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 700px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#modal p {
+  font-size: 1.5em;
+}
+#modal h1 {
+  padding-top: 100px;
+}
+
+#search {
+  text-align: right;
+}
+
+#picContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+#picContainer div {
+  height: 125px;
+  width: 175px;
+  box-sizing: border-box;
+
+  margin: 0.5em;
+
+  border: 3px solid lightblue;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgba(133, 208, 233, 0.774);
+}
+
+#picContainer div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
