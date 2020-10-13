@@ -17,6 +17,10 @@
 
 #search {
   text-align: right;
+
+  position: absolute;
+  width: 250px;
+  right: 0;
 }
 
 #picContainer {
@@ -30,16 +34,52 @@
   height: 125px;
   width: 175px;
   box-sizing: border-box;
-
   margin: 0.5em;
 
   border: 3px solid lightblue;
   border-radius: 10px;
   box-shadow: 3px 3px rgba(133, 208, 233, 0.774);
+  margin-bottom: 2em;
 }
 
 #picContainer div img {
   height: 100%;
   width: 100%;
   border-radius: 7px;
+}
+
+.pictureTitle {
+  font-size: 0.5em;
+}
+
+#carousel {
+  width: 40%;
+  height: 400px;
+  background-color: lightgray;
+  margin: auto;
+  padding: 5px;
+  margin-top: 15px;
+  position: relative;
+  background-size: cover;
+  border: 3px solid gray;
+  border-radius: 15px;
+}
+
+#rightArrow {
+  height: 35px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#leftArrow {
+  height: 35px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#rightArrow:hover {
+  opacity: 0.5;
+}
+#leftArrow:hover {
+  opacity: 0.5;
 }
