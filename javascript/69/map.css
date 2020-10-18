@@ -1,0 +1,44 @@
+body {
+  background-color: lightcoral;
+}
+#map,
+#list {
+  border: 3px solid black;
+
+  max-width: 50%;
+  float: left;
+  height: 100%;
+  padding: 1em;
+  margin: auto;
+  background-color: white;
+  height: 600px;
+  box-sizing: border-box;
+}
+#map {
+  min-width: 40%;
+  margin-right: 2em;
+}
+#list {
+  overflow: auto;
+  width: 400px;
+  text-align: center;
+}
+#magnifying {
+  height: 25px;
+  vertical-align: center;
+}
+#magnifying:hover {
+  background-color: gray;
+}
+#searchBar {
+  float: center;
+  vertical-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li:hover {
+  color: gray;
+}
