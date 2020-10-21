@@ -1,0 +1,19 @@
+body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+#map{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+
+}
+button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  border: 5px solid black;
+}
