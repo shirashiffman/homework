@@ -46,19 +46,22 @@
       }
    
 
-    //     else if (e.type === 'polyline') {
-    //     markers.push({
-    //       type: e.type,
-    //       //path: event.getPath().getArray()
-    //     });
-    //     console.log(e.getPath().getArray().toString());
+        else if (e.type === 'polyline') {
+        markers.push({
+          type: e.type,
+          path: e.overlay.getPath().getArray()
+        });
+        console.log(e.overlay.getPath().getArray());
 
-    //   }
-    //    else if (e.type === 'polygon') {
-    //   console.log(e.overlay.position.lat(), e.overlay.position.lng());
-    //   markers.push(e.overlay.position);
+     }
+       else if (e.type === 'polygon') {
+      
+      markers.push({
+        type: e.type,
+        path: e.overlay.getPath().getArray()
+      });
 
-    // }
+    }
       localStorage.markers = JSON.stringify(markers);
       console.log(JSON.stringify(markers));
     });
@@ -95,14 +98,22 @@
             
               });
               break;
-              // case "polyline":
-              //   let poly= new google.maps.Polyline({
-              //     map: map,
-                 
+              case "polyline":
+                new google.maps.Polyline({
+                  map: map,
+                  path: m.path
               
-              //   });
-              //   poly.setPath(m.path);
-              //   break;
+                });
+                
+                break;
+              case "polygon":
+                new google.maps.Polygon({
+                  map: map,
+                  path: m.path
+              
+                });
+                
+              break;
             default:
               // code block
           }
