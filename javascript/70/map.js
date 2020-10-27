@@ -13,6 +13,7 @@
     const drawingManager = new google.maps.drawing.DrawingManager();
     drawingManager.setMap(map);
     let markers = [];
+    let i = 0;
 
     google.maps.event.addListener(drawingManager, 'overlaycomplete', e => {
       if (localStorage.markers){
@@ -22,21 +23,24 @@
       console.log(e);
       if (e.type === 'marker') {
         markers.push({
+          index: i++,
           type: e.type,
           position: {lat: e.overlay.position.lat(), lng: e.overlay.position.lng()}
         });
       
       } else if (e.type === 'circle') {
         markers.push({
+          index: i++,
           type: e.type,
           center: {lat:e.overlay.center.lat(), lng: e.overlay.center.lng()},
           radius: e.overlay.radius
         });
      
       } else if (e.type === 'rectangle') {
-       console.log(e);
+       //console.log(e);
       
         markers.push({
+          index: i++,
           type: e.type,
           bounds: new google.maps.LatLngBounds(
             new google.maps.LatLng(e.overlay.bounds.Ya.i,e.overlay.bounds.Sa.i),
@@ -48,6 +52,7 @@
 
         else if (e.type === 'polyline') {
         markers.push({
+          index: i++,
           type: e.type,
           path: e.overlay.getPath().getArray()
         });
@@ -57,6 +62,7 @@
        else if (e.type === 'polygon') {
       
       markers.push({
+        index: i++,
         type: e.type,
         path: e.overlay.getPath().getArray()
       });
@@ -72,6 +78,7 @@
     if (localStorage.markers) {
 
       const mArray = JSON.parse(localStorage.markers);
+      //const keyArray = mArray.map((o)=>o.index); 
       mArray.forEach((m) => {
           switch (m.type) {
             case "marker":
@@ -79,10 +86,7 @@
                 position: m.position,
                 map: map,
                 animation: google.maps.Animation.DROP
-              }).addListener('click',function(){
-                  this.setMap(null);
-                  //mArray.splice(this);
-                });
+              });
               break;
             case "circle":
               new google.maps.Circle({
@@ -104,7 +108,6 @@
                   path: m.path
               
                 });
-                
                 break;
               case "polygon":
                 new google.maps.Polygon({
@@ -112,7 +115,6 @@
                   path: m.path
               
                 });
-                
               break;
             default:
               // code block
