@@ -1,0 +1,76 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: darkgray;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#form{
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    
+    margin: auto;
+    
+}
+#header{
+    margin-top:0;
+    text-align: right;
+    padding: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    color: rgb(65, 64, 64);
+
+}
+#addressTo{
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+    padding: 1em 4em ;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+}
+table{
+    margin-top: 70px;
+}
+
+.price{
+    text-align: right;
+}
+
+#leftArrow{
+    color: white;
+    float: left;
+    font-size: 15em;
+    position: absolute;
+    top: 35%;
+    left: 50px;
+
+}
+
+#rightArrow{
+    color: white;
+    float: right;
+    font-size: 15em;
+    position: absolute;
+    top: 35%;
+    right: 50px;
+
+}
+#rightArrow:hover, #leftArrow:hover{
+    color: gray;
+}
+
+.details{
+
+   text-align: center;
+  
+   padding: 3em;
+
+}

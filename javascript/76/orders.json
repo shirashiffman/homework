@@ -1,0 +1,82 @@
+[
+    {
+        "customerName": "Bob",
+        "street": "123 Main St",
+        "city": "Passaic",
+        "state": "NJ",
+        "zip": "07055",
+        "phone": "123-345-5678",
+        "items": [
+            {
+                "item":"Cookies",
+                "quantity": 5,
+                "total": 4.95
+            },
+            {
+                "item":"Jellybeans",
+                "quantity": 2,
+                "total": 3.00
+            }
+        ]
+    },
+    {
+        "customerName": "Joe",
+        "street": "456 East 34th St",
+        "city": "Brooklyn",
+        "state": "NY",
+        "zip": "11210",
+        "phone": "445-555-2222",
+        "items": [
+            {
+                "item":"Carrots",
+                "quantity": 3,
+                "total": 1.03
+            }
+        ]
+    },
+    {
+        "customerName": "Mike",
+        "street": "888 Main Ave",
+        "city": "Clifton",
+        "state": "NJ",
+        "zip": "07055",
+        "phone": "111-344-6664",
+        "items": [
+            {
+                "item":"Carrots",
+                "quantity": 3,
+                "total": 1.03
+            },
+            {
+                "item":"Cucumbers",
+                "quantity": 5,
+                "total": 6.49
+            },
+            {
+                "item":"Pepsi",
+                "quantity": 5,
+                "total": 15.3
+            }
+        ]
+    },
+    {
+        "customerName": "Paul",
+        "street": "1233 Park St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "11201",
+        "phone": "111-445-6662",
+        "items": [
+            {
+                "item":"Pizza Sauce",
+                "quantity": 3,
+                "total": 11.99
+            },
+            {
+                "item":"Cheese",
+                "quantity": 5,
+                "total": 19.89
+            }
+        ]
+    }
+]
