@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      #controls {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="controls">
+      color: <input type="color" id="color">
+      size: <input type="number" id="size" min="1" max="200" value="20">
+      speed: <input type="number" id="speed" min="1" max="6" value="1">
+      <button>add</button>
+    </form>
+    <canvas id="theCanvas"></canvas>
+    <script src="ball2.js"></script>
+  </body>
+
+</html>

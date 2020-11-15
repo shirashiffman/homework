@@ -24,6 +24,8 @@
     function playGame(){
         const snake = new Image();
         snake.src = 'images/snakehead.png';
+        const snakeBody = new Image();
+        snakeBody.src = 'images/body.png';
         const apple = new Image();
         apple.src = 'images/apple.png';
         const crunch = new Audio();
@@ -41,6 +43,10 @@
         let x = SNAKE_SIZE;
         let y= SNAKE_SIZE;
         let score = 0;
+        let images = [snake];
+        
+        let deltaX;
+        let deltaY;
 
         let appleX = getRandomCoordinate(canvas.width-16);
         let appleY = getRandomCoordinate(canvas.height -16);
@@ -49,30 +55,41 @@
         let interval = setInterval(()=>{
             context.clearRect(0,0, canvas.width, canvas.height);
             context.drawImage(snake, x, y, SNAKE_SIZE, SNAKE_SIZE);
+            images.forEach((image, index)=>{
+                context.drawImage(image, x + (deltaX * index+1), y+(deltaY * index +1), SNAKE_SIZE, SNAKE_SIZE);
+            });
+            
             context.drawImage(apple, appleX, appleY, SNAKE_SIZE, SNAKE_SIZE);
 
             context.font = 'bold 48px serif';
             context.fillText(score, canvas.width-100, 50);
 
-           
             switch (direction) {
                 case 'ArrowLeft':
                   x -= SNAKE_SIZE/speed;
+                  deltaX = SNAKE_SIZE *1;
+                  deltaY = 0;
                   break;
                 case 'ArrowRight':
                   x += SNAKE_SIZE/speed;
+                  deltaX = SNAKE_SIZE*-1;
+                  deltaY = 0;
                   break;
                 case 'ArrowUp':
                   y -= SNAKE_SIZE/speed;
+                  deltaY = SNAKE_SIZE*1;
+                  deltaX = 0;
                   break;
                 case 'ArrowDown':
                   y += SNAKE_SIZE/speed;
+                  deltaY = SNAKE_SIZE*-1;
+                  deltaX = 0;
                   break;
             }
            // console.log(x,y);
             eatApple();
             detectEdge(x, y);         
-            
+            //console.log(x, y);
         }, 75);
         
         
@@ -90,7 +107,10 @@
                     console.log("hit");
                     score++;
                     crunch.play();
+                    images.push(snakeBody);
                 }
+
+              
 
                 if(score=== 5){
                     speed= 3;
@@ -133,10 +153,25 @@
             //console.log(e);
             switch (e.key) {
               case 'ArrowUp':
+                  if(direction !=='ArrowDown'){
+                    direction = e.key;
+                  }
+                  break;
               case 'ArrowDown':
+                if(direction !=='ArrowUp'){
+                    direction = e.key;
+                  }
+                  break;
               case 'ArrowLeft':
+                if(direction !=='ArrowRight'){
+                    direction = e.key;
+                  }
+                  break;
               case 'ArrowRight':
-                direction = e.key;
+                if(direction !=='ArrowLeft'){
+                    direction = e.key;
+                  }
+                  break;
             }
           });
 

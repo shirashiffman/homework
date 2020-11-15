@@ -1,3 +1,4 @@
+
 #modal {
   background-color: lightblue;
   text-align: center;
@@ -66,20 +67,40 @@
 }
 
 #rightArrow {
-  height: 35px;
+  height: 50px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 300px;
+  bottom: 10px;
+
+
 }
 #leftArrow {
-  height: 35px;
+  height: 50px;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 300px;
+  bottom: 10px;
 }
 #rightArrow:hover {
   opacity: 0.5;
 }
 #leftArrow:hover {
   opacity: 0.5;
+}
+#carouselContainer{
+  display: none;
+  position: relative;
+}
+
+input[type="radio"]{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+}
+label:not(:last-child) {
+  padding-right: 2em;
+}
+#numberPicker{
+  margin: auto;
+  width: 350px;
 }

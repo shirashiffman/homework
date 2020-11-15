@@ -57,6 +57,7 @@
                 items.forEach(itemObject=>{
                     let {item, quantity, total} = itemObject;
                     itemArray.push(new Item(item, (total/quantity), quantity));
+                  
                 });
                 orders.push(new Order(customerName, street, city, state, zip, phone, itemArray));
             });

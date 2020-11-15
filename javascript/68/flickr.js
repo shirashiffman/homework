@@ -3,30 +3,37 @@
   "use strict";
 
   const picContainerElem = $("#picContainer");
-  const carousel = $("#carousel");
+  let sourceIndex = 0;
+  //const carousel = $("#carousel");
   //carousel.hide();
   picContainerElem.hide();
 
   $("#searchButton").click(function () {
     picContainerElem.empty();
     let searchVal = $("#searchBox").val();
+    $("#searchBox").val("");
     picContainerElem.show();
     $.getJSON(
       `https://api.flickr.com/services/feeds/photos_public.gne?tags=${searchVal}&format=json&jsoncallback=?`,
       function (data) {
         $("#modal").hide();
-
+        $("#carouselContainer").show();
         let picArray = data.items;
-        picArray.forEach((imgObject) => {
+        picArray.forEach((imgObject,index) => {
           $(`<div ><img src=${imgObject.media.m}></div>`)
-            .appendTo(picContainerElem)
-            .append($(`<span class="pictureTitle">${imgObject.title}</span>`));
+            .appendTo(picContainerElem).click(()=>{
+              document.getElementById(
+                "carousel"
+              ).style.backgroundImage = `url(${imgObject.media.m})`;
+              sourceIndex = index;
+            });
+            //.append($(`<span class="pictureTitle">${imgObject.title}</span>`));
           console.log(imgObject);
         });
         const rightArrow = $("#rightArrow");
         const leftArrow = $("#leftArrow");
-        let sourceIndex = 0;
-        console.log("clicked");
+
+       // console.log("clicked");
         document.getElementById(
           "carousel"
         ).style.backgroundImage = `url(${picArray[sourceIndex].media.m})`;
@@ -51,4 +58,6 @@
       }
     );
   });
+
+  
 })();
