@@ -4,6 +4,7 @@
 
     const canvas= document.getElementById("theCanvas");
     const context = canvas.getContext('2d');
+    const SNAKE_SIZE = 48;
 
     function resizeCanvas(){
         canvas.width = window.innerWidth;
@@ -37,7 +38,7 @@
 
         console.log("game called");
         snake.addEventListener('load',()=>{
-        const SNAKE_SIZE = 32;
+        
         let speed = 4;
         let direction = 'ArrowRight';
         let x = SNAKE_SIZE;
@@ -48,8 +49,8 @@
         let deltaX;
         let deltaY;
 
-        let appleX = getRandomCoordinate(canvas.width-16);
-        let appleY = getRandomCoordinate(canvas.height -16);
+        let appleX = getRandomCoordinate(canvas.width - SNAKE_SIZE/2);
+        let appleY = getRandomCoordinate(canvas.height -SNAKE_SIZE/2);
       
 
         let interval = setInterval(()=>{
@@ -63,10 +64,14 @@
 
             context.font = 'bold 48px serif';
             context.fillText(score, canvas.width-100, 50);
+          
+            // let turnX;
+            // let turnY;
 
             switch (direction) {
                 case 'ArrowLeft':
                   x -= SNAKE_SIZE/speed;
+                  
                   deltaX = SNAKE_SIZE *1;
                   deltaY = 0;
                   break;
@@ -102,8 +107,8 @@
             
           
                 if(dX < 30 && dY < 30){
-                    appleX = getRandomCoordinate(canvas.width-16);
-                    appleY = getRandomCoordinate(canvas.height - 16);
+                    appleX = getRandomCoordinate(canvas.width-SNAKE_SIZE/2);
+                    appleY = getRandomCoordinate(canvas.height - SNAKE_SIZE/2);
                     console.log("hit");
                     score++;
                     crunch.play();
@@ -126,7 +131,7 @@
         }
 
         function detectEdge(x, y){
-            if(x === 0 || x === (canvas.width) || y === 0 || y === (canvas.height)){
+            if(x < 0 || x > (canvas.width- SNAKE_SIZE) || y < 0 || y > (canvas.height- SNAKE_SIZE)){
                 gameOver.play();
                clearInterval(interval);
               // console.log(canvas.width-16, canvas.width, x);
@@ -183,6 +188,8 @@
             } 
             return xCor;
           }
+
+         
      });
     }
 }());
