@@ -1,0 +1,39 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /* background: rgb(131,58,180); */
+    /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+}
+
+#modal{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    display: none;
+}
+
+#cardContainer{
+    margin: auto;
+    width: 80%;
+    /* height: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 1em 1em;
+    padding: 0;
+    /* border: 5px solid yellow; */
+    border-radius: 15px;
+    
+}
+
+.card img{
+    height: 200px;
+}
+
+.match{
+    opacity: 50%;
+}
