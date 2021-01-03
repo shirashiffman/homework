@@ -2,26 +2,22 @@ import React, {Component} from 'react';
 
 export default class WeatherDetails extends Component{
 
-    constructor(props){
-        super(props);
+        // state = {
+        //     temp: this.props.details.temp,
+        //     description: this.props.details.description,
+        //     icon: this.props.details.icon
+        // }
 
-        this.state = {
-            temp: this.props.details.temp,
-            description: this.props.details.description,
-            icon: this.props.details.icon
-        }
-        this.temp = this.props.details.temp;
-        this.description = this.props.details.description;
-        this.icon = this.props.details.icon;
-        // let {temp, description, icon} = this.props.details;
-    }
-
+    
+   
     render(){
         return(
             <div>
-                {this.state.temp}<br/>
-                {this.state.description}<br/>
-                {this.state.icon}<br/>
+                Temp (F):{this.props.details.temp}<br/>
+                Description: {this.props.details.description}<br/>
+                <img src={`http://openweathermap.org/img/wn/${this.props.details.icon}.png`}></img><br/>
+                {console.log(this.state)}
+                {console.log(this.props)}
             </div>
         );
     }

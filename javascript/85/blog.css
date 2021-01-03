@@ -1,0 +1,63 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url('/85/phone3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#container{
+    width: 22%;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    /* grid-template-columns: 1fr 2fr; */
+    text-align: center;
+    height: 89%;
+    overflow: auto;
+    position: absolute;
+    top: 60px;
+    right: 634px;
+}
+
+
+
+.user{
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid rgb(111, 195, 223);
+    box-sizing: border-box;
+    background-color: lightblue;
+     border-radius: 10px;
+}
+
+.post{
+    padding: 1em;
+    margin: 1em;
+    border: 2px solid rgb(97, 97, 97);
+    border-radius: 10px;
+}
+
+.user:hover{
+    /* color: grey; */
+    /* box-shadow: -1px -2px; */
+    box-shadow: inset 0 0 10px gray;
+    cursor: pointer;
+}
+
+button .comment{
+    border-radius:  7px;
+    padding: .25em;
+    background-color: lightgrey;
+}
+
+button:hover{
+    box-shadow: 1px 2px;
+    cursor: pointer;
+}
+
+.selected{
+    box-shadow: 1px 2px;
+}

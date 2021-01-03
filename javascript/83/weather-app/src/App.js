@@ -15,7 +15,7 @@ export default class App extends Component {
         icon: null
       }
     }
-    this.key = "bb5b1212339b1c46a2974824fe906f03";
+    this.key = "";
     this.handleGo = this.handleGo.bind(this);
     this.getZip= this.getZip.bind(this);
   }
@@ -64,7 +64,6 @@ export default class App extends Component {
     </div>
     <div id ="details">
       < WeatherDetails details={this.state.weatherDetails}/>
-      {console.log(this.state.weatherDetails)}
     </div>
     </>
    );
