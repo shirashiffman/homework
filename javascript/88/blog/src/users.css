@@ -1,0 +1,26 @@
+body{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#userContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+.user{
+    text-align: center;
+    border: 3px solid grey;
+    padding: 1em;
+    color: black;
+
+}
+
+.user:link, .user:hover, .user:active, .user:visited, .user:focus {
+    text-decoration:none;
+    color: black;
+    font-style: normal;
+}
