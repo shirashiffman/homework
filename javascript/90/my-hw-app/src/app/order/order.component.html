@@ -1,0 +1,4 @@
+<div>Order # {{order.orderNum}}</div>
+<div>Customer: <app-person [person] ="order.person"></app-person> </div>
+<div>Item: <app-item [item] = "order.item"></app-item></div>
+<div>Total Price: ${{order.totalAmount}}</div>
