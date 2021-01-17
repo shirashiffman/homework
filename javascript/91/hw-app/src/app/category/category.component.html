@@ -1,0 +1,11 @@
+<div *ngIf = "!category">
+  No items to display
+</div>
+<div *ngIf = "category">
+  Category displayed here
+  {{category.name}}
+  <div *ngFor="let item of category.items">
+    <app-item [item] = "item"></app-item>
+  </div>
+
+</div>

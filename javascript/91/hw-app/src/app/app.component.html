@@ -1,0 +1,13 @@
+<select [(ngModel)]="selectedCat">
+    <option value="" selected></option>
+      <option *ngFor="let category of categories" [value]="category.name">
+          {{category.name}}
+        </option>
+  </select>
+
+  
+  <div>
+    Selected: {{selectedCat}}
+   <app-category [category] ="this.findSelected(selectedCat)"></app-category>
+  </div>
+  

@@ -1,6 +1,7 @@
 
 import './App.css';
 import Companies from './Companies';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <br/>
       PCS Stock Ticker
     </header>
-    <Companies />
+
+   <Companies />
+    
     </>
   );
 }
