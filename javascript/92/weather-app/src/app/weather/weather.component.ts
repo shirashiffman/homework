@@ -21,7 +21,7 @@ export class WeatherComponent implements OnInit {
   }
 
   getWeather(zip){
-    this.httpClient.get<any>(`https://api.openweathermap.org/data/2.5/weather?zip=${this.zip}&units=imperial&appid=bbcf5af671d12e8fdf25d8423ce8cd73`)
+    this.httpClient.get<any>(`https://api.openweathermap.org/data/2.5/weather?zip=${this.zip}&units=imperial&appid=`)
     .subscribe(
       data =>{
         this.weatherDetails = {
