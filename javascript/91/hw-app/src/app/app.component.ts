@@ -1,4 +1,6 @@
 import { Component, ɵisBoundToModule__POST_R3__ } from '@angular/core';
+import { Category } from './shared/category';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Component, ɵisBoundToModule__POST_R3__ } from '@angular/core';
 export class AppComponent {
   title = 'hw-app';
 
-  selectedCat = null
+
 
   categories= [
     {
@@ -64,9 +66,11 @@ export class AppComponent {
       ]
     }
   ]
+
+  //selectedCat=  0;
   
- findSelected(selected: string){
-   return this.categories.filter(c => c.name === selected)
-}
+    // findSelected(selectedIndex: string){
+    //   this.selectedCat = +selectedIndex;
+    // }
   
   }

@@ -1,0 +1,9 @@
+<div>
+    
+      Zip Code<input [(ngModel)] = "zip"/>
+      <button (click)= "getWeather(zip)">Go</button>
+    
+  </div>
+  <div>
+    <app-weather-details [details] = "this.weatherDetails"></app-weather-details>
+  </div>

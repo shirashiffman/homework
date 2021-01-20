@@ -1,6 +1,6 @@
 import { Item } from "./item";
 
 export interface Category {
-    name: string;
-    items: Item[];
+    name: string,
+    items: Item[]
 }
