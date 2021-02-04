@@ -1,25 +1,31 @@
+const bl = require('bl');
 const http = require('http');
-let dataArray = [];
+
 let returnedData = [];
 let count = 0;
 
 let urlArray = [process.argv[2], process.argv[3], process.argv[4]];
 
 for(let i =0; i < urlArray.length; i++){
-    http.get(urlArray[i], response =>{
+    getHttp(urlArray[i], i)
+   
+}
+
+function getHttp(url, i){
+    let dataResult = '';
+    http.get(url, response =>{
         response.setEncoding('utf-8');
         response.on('data', data=>{
-            dataArray.push(data);
+            dataResult += data;
         });
         response.on('end',()=>{
-            let string = dataArray.join("");
-            returnedData[i] = string;
+           
+            returnedData[i] = dataResult;
             count++;
             print();
         })
     })
 }
-
 function print(){
     if(count === 3){
         returnedData.forEach(data =>{
