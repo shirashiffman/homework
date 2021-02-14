@@ -1,0 +1,23 @@
+<form id="contactForm" method="POST">
+    <div class="formGroup">
+        <label for="first">first:</label>
+        <input id="first" name='firstname' value={{contacts.firstname}}>
+    </div>
+    <div class="formGroup">
+        <label for="last">last:</label>
+        <input id="last" name='lastname' value={{contacts[0].lastname}}>
+    </div>
+    <div class="formGroup">
+        <label for="email">email:</label>
+        <input id="email" name='email' type="email" value={{contact.lastname}}>
+    </div>
+    <div class="formGroup">
+        <label for="phone">phone:</label>
+        <input id="phone" name='phone' value={{contact.lastname}}>
+    </div>
+    <div class="buttons">
+        <a href='/contacts/delete:{{id}}'>Delete</a>
+        <a href='/contacts/edit:{{id}}'>Edit</a>
+        <a href='/contacts' type="button" id="cancel">cancel</a>
+    </div>
+</form>
