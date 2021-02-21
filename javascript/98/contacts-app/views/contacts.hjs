@@ -4,6 +4,7 @@
     <table id="contacts">
         <thead>
             <tr>
+                <th>id</th>
                 <th>first</th>
                 <th>last</th>
                 <th>email</th>
@@ -24,7 +25,7 @@
                 <td>{{lastname}}</td>
                 <td>{{email}}</td>
                 <td>{{phone}}</td>
-                <td><a href='/contacts/edit:{{id}}'>Edit</a></td>
+                <td><a href='/contacts/edit/{{id}}'>Edit</a></td>
             </tr>
             {{/contacts}}
         </tbody>

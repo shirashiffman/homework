@@ -32,26 +32,26 @@ router.post('/add', function(req, res, next) {
    res.redirect('/contacts');
 });
 
-router.get('/edit:id', function(req, res, next) {
+router.get('/edit/:id', function(req, res, next) {
   //res.send('respond with a resource');
   res.render('layout', 
   {
     noContacts: noContacts,
     partials: {content: 'delete'},
-    contacts: contacts.filter(contact=> contact.id === req.params.id)
+    contact: contacts.filter(contact=> contact.id === +req.params.id)
     
 })
 })
 
-router.post('/delete:id', function(req, res, next) {
+router.post('/delete/:id', function(req, res, next) {
   //res.send('respond with a resource');
-  contacts.filter(contact =>{contact.id !== req.params.id});
+  contacts.filter(contact =>{contact.id !== +req.params.id});
   res.redirect('/contacts');
 
 });
-router.post('/edit:id', function(req, res, next) {
+router.post('/edit/:id', function(req, res, next) {
   //res.send('respond with a resource');
-  contacts.filter(contact =>{contact.id !== req.params.id});
+  contacts.filter(contact =>{contact.id !== +req.params.id});
   contacts.push(req.body)
   res.redirect('/contacts');
 

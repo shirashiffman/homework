@@ -1,7 +1,7 @@
 <form id="contactForm" method="POST">
     <div class="formGroup">
         <label for="first">first:</label>
-        <input id="first" name='firstname' value={{contacts.firstname}}>
+        <input id="first" name='firstname' value={{contact[0].firstname}}>
     </div>
     <div class="formGroup">
         <label for="last">last:</label>
@@ -16,8 +16,8 @@
         <input id="phone" name='phone' value={{contact.lastname}}>
     </div>
     <div class="buttons">
-        <a href='/contacts/delete:{{id}}'>Delete</a>
-        <a href='/contacts/edit:{{id}}'>Edit</a>
+        <a href='/contacts/delete/{{id}}'>Delete</a>
+        <a href='/contacts/edit/{{id}}'>Edit</a>
         <a href='/contacts' type="button" id="cancel">cancel</a>
     </div>
 </form>
