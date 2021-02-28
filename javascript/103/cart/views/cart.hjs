@@ -1,0 +1,45 @@
+<link href="\stylesheets\cart.css" rel="stylesheet" />
+<div class="col">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h4 class="my-0 fw-normal">{{name}}</h4>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#items}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{description}}</td>
+                        <td>${{price}}</td>
+                        <td>{{count}}</td>
+                        <td>${{totalPrice}}</td>
+                    </tr>
+                    {{/items}}
+                    <tr>
+                        <th scope="row" colspan="4">Total Price</th>
+                        <td>${{cartTotal}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <form class="row row-cols-lg-auto g-3 align-items-center" method="POST">
+
+
+                <div class="col-12">
+                    <button class="w-100 btn btn-outline-primary">Checkout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
