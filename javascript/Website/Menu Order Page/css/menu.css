@@ -1,0 +1,174 @@
+.menuItem img {
+  width: 175px;
+  height: 200px;
+  border: 5px solid limegreen;
+  border-radius: 25px;
+}
+
+.menuItem li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menuItem p {
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: -12px;
+  background-color: rgba(128, 128, 128, 0.795);
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  margin-left: 4px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.menuItem div {
+  position: relative;
+  text-align: center;
+  margin: 1em 1em 1em 1em;
+  float: left;
+  margin-top: 3em;
+}
+
+/*ul {
+  padding-top: 25px;
+}*/
+
+.menuDiv {
+  margin: auto;
+}
+
+#endDiv {
+  clear: both;
+}
+
+nav {
+  z-index: 1;
+}
+.addButton{
+  position: absolute;
+  bottom: -25px;
+  right: 3px;
+  width: 175px;
+  border-radius: 5px;
+  background-color: limegreen;
+  /* border: 1px solid darkgreen; */
+
+}
+#cartIcon{
+  height: 45px;
+  margin-left: 3em;
+  margin-top: -2em;
+  position: absolute;
+  right: 200px;
+  top: 55px;
+}
+
+#form{
+  display: none;
+  background-color: white;
+  width: 50%;
+  position: absolute;
+  top: 95px;
+  border: 10px solid black;
+  left: 350px;
+  padding: 2em;
+  padding-bottom: 4em;
+  
+}
+#addressTo{
+  padding-left: 3em;
+}
+#header{
+  margin-top:0;
+  text-align: right;
+  padding: 0 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3em;
+  color: rgb(65, 64, 64);
+
+}
+#modal{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(169, 169, 169, 0.582);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#cancel, #order{
+  position: absolute;
+  bottom: -45px;
+  
+  width: 175px;
+  border-radius: 5px;
+  background-color: limegreen;
+
+}
+#order{
+  left: 150px;
+}
+#cancel{
+  right: 150px;
+}
+div.buttons{
+  position: relative;
+}
+table, tr, th, td{
+  border: 1px solid black;
+  padding: 0 4em ;
+  border-collapse: collapse;
+  margin: auto;
+  text-align: center;
+}
+table{
+  margin-top: 70px;
+}
+
+.price{
+  text-align: right;
+}
+
+label{
+  width: 75px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: .5em;
+  margin-left: 4em;
+}
+
+
+@media screen and (max-width: 799px) {
+  .menuItem div {
+    width: 300px;
+  }
+
+  .menuItem div :first-of-type {
+    margin-top: 2em;
+  }
+  .menuItem p {
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: -5px;
+    background-color: rgba(128, 128, 128, 0.795);
+    border-radius: 45px;
+    left: 30px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .menuItem div {
+    position: relative;
+    text-align: center;
+    width: 250px;
+    float: left;
+    margin: 0;
+  }
+}
